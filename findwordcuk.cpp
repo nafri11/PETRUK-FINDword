@@ -4,6 +4,8 @@
 using namespace std;
 
 int main () {
+    int b,k;
+    char kata[100];
 	char dataword[15][15]= {{'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 			        {'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 				{'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
@@ -19,10 +21,14 @@ int main () {
 				{'m','o','s','g','z','c','z','e','t','d','b','o','o','t','o'},
 				{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
 				{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}};
-						  
-	for (int b=0;b<15;b++){
-		for (int k=0;k<15;k++){
+
+	for (b=0;b<15;b++){
+		for (k=0;k<15;k++){
 			cout<<dataword[b][k]<<" ";
-		}cout<<endl;
-	} 
-}
+                	}cout<<endl;
+                }
+        	cout<<"================================"<<endl;
+		cout<<"masukan kata yang ingin dicari : ";
+		cin>>kata[100];
+		cout<<endl;
+	}
