@@ -122,3 +122,62 @@ void findword(int x, int y) //x=i y=j
         }
     }
 }
+
+void display(int x, int y)
+{
+    //display matrix
+    for(x=0;x<15;x++)
+    {
+        for(y=0;y<15;y++)
+        {
+            cout << puzzle[x][y]<<" ";
+        }
+        cout<<"\n";
+    }
+       cout<<"================================="<<endl;
+}
+
+void reset()
+{
+    pos=0;
+    valid=0;
+    arah=0;
+}
+
+int main()
+{
+    int i,j, answer;
+
+    valid = 0;
+    arah = 0;
+    pos = 0;
+    int stop = 0;
+   // cin>>w;
+   // cin>>h;
+
+    display(i,j);
+    while(stop == 0)
+    {
+        cout << "Masukkan kata yang ingin dicari : ";
+        cin >> kata;
+
+        len_kata = kata.length();
+        //mulai melakukan pencarian
+        for(i=0;i<15;i++)
+        {
+            for(j=0;j<15;j++)
+            {
+                if(kata[0] == puzzle[i][j] && valid==false)
+                {
+                    //pencatatan indeks
+                    hx[pos] = i;
+                    hy[pos] = j;
+                    pos++;
+
+                    findword(i, j);
+                    //findword(int pos, int direction)
+                    pos--;
+                }
+            }
+        }
+
