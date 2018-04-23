@@ -180,4 +180,36 @@ int main()
                 }
             }
         }
+	    cout << endl;
+
+        if(valid==true)
+            cout << "ADA" << endl << endl;
+        else
+            cout << "TIDAK ADA" << endl << endl;
+
+        for(i=0;i<len_kata;i++)
+        {
+            puzzle[hx[i]][hy[i]] = puzzle[hx[i]][hy[i]] - 32;
+        }
+
+        display(i,j);
+
+        //reset tabel menjadi huruf kecil semua
+        for(i=0;i<len_kata;i++)
+        {
+            puzzle[hx[i]][hy[i]] = puzzle[hx[i]][hy[i]] + 32;
+        }
+
+        reset();
+
+        cout << endl;
+        cout << "Apakah ingin mengakhiri? Ketik 0 untuk bermain lagi, ketik 1 untuk mengakhiri" << endl;
+        cout << "Jawaban : ";
+        cin >> answer;
+        stop = answer;
+    }
+
+    system("PAUSE");
+    return 0;
+}
 
